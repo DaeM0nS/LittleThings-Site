@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <link rel="manifest" href="/LittleThings-Site/manifest.webmanifest" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <link rel="apple-touch-icon" href="/LittleThings-Site/icons/icon-192.png" />
+  <meta name="apple-mobile-web-app-title" content="LittleThings" />
+
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <script>
+    (function () {
+      var params = new URLSearchParams(
+        window.location.search,
+      );
+
+      var path = params.get('p');
+
+      if (!path) {
+        return;
+      }
+
+      var query = params.get('q');
+      var hash = params.get('h');
+
+      var restoredUrl =
+        '/LittleThings-Site' +
+        path +
+        (query ? '?' + query : '') +
+        (hash ? '#' + hash : '');
+
+      window.history.replaceState(
+        null,
+        '',
+        restoredUrl,
+      );
+    })();
+  </script>
+  <title>LittleThings</title>
+  <script type="module" crossorigin src="/LittleThings-Site/assets/index-ChwdIkr1.js"></script>
+  <link rel="stylesheet" crossorigin href="/LittleThings-Site/assets/index-dLHrduBU.css">
+<link rel="manifest" href="/LittleThings-Site/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/LittleThings-Site/registerSW.js" defer></script></head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>
